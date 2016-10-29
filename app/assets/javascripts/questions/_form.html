@@ -1,0 +1,13 @@
+<div class="form-group" ng-class="errorClass('content')">
+  <label class="control-label" for="content">Content <span class="required">* </span></label>
+  <input type="text" class="form-control" name="content" ng-model="question.content" server-error />
+  <p ng-show="form.content.$error.server" class="help-block">{{errors.content}}</p>
+</div>
+<div class="form-group" ng-class="errorClass('answer')">
+  <label class="control-label" for="answer">Answer <span class="required">* </span></label>
+  <input type="text" class="form-control" name="answer" ng-model="question.answer" server-error />
+  <p ng-show="form.answer.$error.server" class="help-block">{{errors.content}}</p>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+<a href="#/questions" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-repeat"></i> Back</a>

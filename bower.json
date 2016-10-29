@@ -1,0 +1,29 @@
+{
+  "name": "quiz-master",
+  "homepage": "https://github.com/akbarbin/quiz-master",
+  "authors": [
+    "Muhamad Akbar Bin Widayat <muhamadakbarbw@gmail.com>"
+  ],
+  "description": "quiz master",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "quiz",
+    "master"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8",
+    "angular-ui-router": "~0.3.1",
+    "angular-resource": "~1.5.8",
+    "angular-bootstrap": "~2.2.0",
+    "bootstrap": "~3.3.7"
+  }
+}

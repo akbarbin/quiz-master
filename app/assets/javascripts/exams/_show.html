@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>
+      <a href="#/exams" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-repeat"></i> Back</a>
+      <a ng-show="question.result == true" class="btn btn-sm btn-success pull-right"><i class="glyphicon glyphicon-ok"></i> Correct</a>
+      <a ng-show="question.result == false" class="btn btn-sm btn-danger pull-right"><i class="glyphicon glyphicon-remove-circle"></i> Incorrect</a>
+    </p>
+    <p><b>Questions:</b></p>
+    <p>{{question.content}}</p>
+
+    <form role="form" name="form" id="question-new" ng-submit="validateExam()" novalidate>
+      <div class="form-group">
+        <label class="control-label" for="answer">Your Answer:</label>
+        <input type="hidden" class="form-control" name="question_id" ng-value="exam.question_id = question.id" ng-model="exam.question_id">
+        <input type="text" class="form-control" name="answer" ng-model="exam.answer">
+      </div>
+
+      <div class="form-group row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <button class="btn btn-block btn-info" ng-disabled="question.result">
+            Submit <span class="glyphicon glyphicon-ok"></span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

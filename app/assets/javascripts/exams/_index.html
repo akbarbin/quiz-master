@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="page-header">
+    <h1>Exam</h1>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Question List</div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Content</th>
+              <th>Result</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="question in questions">
+              <td>{{$index + 1}}</td>
+              <td>{{question.content}}</td>
+              <td>{{ {true:'Correct', false:'Incorrect'}[question.result] }}</td>
+              <td>
+                <a ui-sref="exams.questions({id: question.id})" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-eye-open"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div ui-view></div>
+  </div>
+</div>

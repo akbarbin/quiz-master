@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>
+      <a href="#/questions" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-repeat"></i> Back</a>
+    </p>
+
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td>Content</td>
+          <td>{{question.content}}</td>
+        </tr>
+        <tr>
+          <td>Answer</td>
+          <td>{{question.answer}}</td>
+        </tr>
+        <tr>
+          <td>Created At</td>
+          <td>{{question.created_at | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+        </tr>
+        <tr>
+          <td>Updated At</td>
+          <td>{{question.updated_at | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
