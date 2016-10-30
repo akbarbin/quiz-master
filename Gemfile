@@ -14,8 +14,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'angular-rails-templates'
-gem 'angular_rails_csrf'
+gem 'angular-rails-templates', '1.0.2'
+gem 'angular_rails_csrf', '2.0.0'
 
 gem 'responders', '~> 2.0'
 
@@ -28,9 +28,15 @@ gem 'responders', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'sass', '3.4.22'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "rspec-rails", "~> 2.0"
+  gem "factory_girl_rails", "~> 4.0"
+  gem "capybara"
+  gem "database_cleaner"
+  gem "selenium-webdriver"
 end
 
 group :development do
